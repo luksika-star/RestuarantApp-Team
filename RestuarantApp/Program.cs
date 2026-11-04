@@ -27,7 +27,6 @@ namespace RestuarantApp
                 Console.WriteLine($"ID: {res.id} | ร้าน: {res.name} | ประเภท: {res.type} | คะแนน: {res.rating}");
             }
 
-
             // เรียกใช้งานเมธอดเพิ่มร้านอาหาร
             AddRestaurant(restaurants);
 
@@ -38,8 +37,8 @@ namespace RestuarantApp
             {
                 Console.WriteLine($"ID: {res.id} | ร้าน: {res.name} | ประเภท: {res.type} | คะแนน: {res.rating}");
             }
-
         }
+
         public static void AddRestaurant(List<Restuarant> restaurants)
         {
             Console.WriteLine("\n--- เพิ่มข้อมูลร้านอาหารใหม่ ---");
@@ -56,10 +55,18 @@ namespace RestuarantApp
 
             double rating;
 
+            while (!double.TryParse(Console.ReadLine(), out rating))
+            {
+                Console.Write("กรอกข้อมูลไม่ถูกต้อง กรุณากรอกคะแนนเป็นตัวเลข: ");
+            }
 
+            restaurants.Add(new Restuarant(id, name, type, rating));
+
+            Console.WriteLine("เพิ่มข้อมูลร้านสำเร็จ");
         }
+    }
 
-        public class Restuarant
+    public class Restuarant
     {
         public int id { get; set; }
         public string name { get; set; }
