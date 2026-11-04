@@ -22,10 +22,26 @@ namespace RestuarantApp
 
             Console.WriteLine("\n=== รายการร้านอาหารทั้งหมด ===");
 
-           
+            foreach (Restuarant res in restaurants)
+            {
+                Console.WriteLine($"ID: {res.id} | ร้าน: {res.name} | ประเภท: {res.type} | คะแนน: {res.rating}");
+            }
+
+
+            // เรียกใช้งานเมธอดเพิ่มร้านอาหาร
+            AddRestaurant(restaurants);
+
+            // แสดงรายการร้านอาหารอีกครั้ง
+            Console.WriteLine("\n=== รายการร้านอาหารหลังเพิ่มข้อมูล ===");
+
+            foreach (Restuarant res in restaurants)
+            {
+                Console.WriteLine($"ID: {res.id} | ร้าน: {res.name} | ประเภท: {res.type} | คะแนน: {res.rating}");
+            }
+
         }
 
-        
+
     }
 
     public class Restuarant
