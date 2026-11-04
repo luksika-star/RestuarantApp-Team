@@ -40,11 +40,26 @@ namespace RestuarantApp
             }
 
         }
+        public static void AddRestaurant(List<Restuarant> restaurants)
+        {
+            Console.WriteLine("\n--- เพิ่มข้อมูลร้านอาหารใหม่ ---");
+
+            int id = restaurants.Count + 1;
+
+            Console.Write("กรอกชื่อร้าน: ");
+            string name = Console.ReadLine();
+
+            Console.Write("กรอกประเภทร้าน: ");
+            string type = Console.ReadLine();
+
+            Console.Write("กรอกคะแนนร้าน (เช่น 4.5): ");
+
+            double rating;
 
 
-    }
+        }
 
-    public class Restuarant
+        public class Restuarant
     {
         public int id { get; set; }
         public string name { get; set; }
