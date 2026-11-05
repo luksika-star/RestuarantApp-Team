@@ -70,7 +70,11 @@ namespace RestuarantApp
             {
                 if (restaurant.rating >= 4.5)
                 {
-                   
+                    Console.WriteLine(
+                        $"ชื่อร้าน: {restaurant.name}, " +
+                        $"ประเภท: {restaurant.type}, " +
+                        $"คะแนน: {restaurant.rating}"
+                    );
                 }
             }
 
