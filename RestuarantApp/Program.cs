@@ -38,7 +38,11 @@ namespace RestuarantApp
             {
                 Console.WriteLine($"ID: {res.id} | ร้าน: {res.name} | ประเภท: {res.type} | คะแนน: {res.rating}");
             }
+  
+
         }
+
+
 
         public static void AddRestaurant(List<Restuarant> restaurants)
         {
@@ -78,11 +82,12 @@ namespace RestuarantApp
                     );
                 }
             }
-
-
         }
-        // แสดงค่าสูงสุดต่ำสุด
-        static void Summary(List<Restuarant> list)
+            public class Summary
+        {
+
+        
+        public void summary(List<Restuarant> list)
         {
             Console.WriteLine("\n===== Restaurant Summary =====");
 
@@ -103,6 +108,10 @@ namespace RestuarantApp
             Console.WriteLine(
                 $"Lowest: {lowest.name} ({lowest.rating})");
         }
+        }
+      }
+        // แสดงค่าสูงสุดต่ำสุด
+       
     }
 
     public class Restuarant
@@ -120,4 +129,4 @@ namespace RestuarantApp
             this.rating = rate;
         }
     }
-}
+
