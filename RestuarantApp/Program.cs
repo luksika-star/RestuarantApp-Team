@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace RestuarantApp
 {
@@ -63,6 +64,29 @@ namespace RestuarantApp
             restaurants.Add(new Restuarant(id, name, type, rating));
 
             Console.WriteLine("เพิ่มข้อมูลร้านสำเร็จ");
+        }
+        // แสดงค่าสูงสุดต่ำสุด
+        static void Summary(List<Restuarant> list)
+        {
+            Console.WriteLine("\n===== Restaurant Summary =====");
+
+            if (list.Count == 0)
+            {
+                Console.WriteLine("No restaurant data.");
+                return;
+            }
+
+            var highest = list.OrderByDescending(
+                r => r.rating).First();
+
+            var lowest = list.OrderBy(
+                r => r.rating).First();
+
+            Console.WriteLine(
+                $"Highest: {highest.name} ({highest.rating})");
+
+            Console.WriteLine(
+                $"Lowest: {lowest.name} ({lowest.rating})");
         }
     }
 
