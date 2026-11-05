@@ -76,17 +76,6 @@ namespace RestuarantApp
                 return;
             }
 
-            var highest = list.OrderByDescending(
-                r => r.rating).First();
-
-            var lowest = list.OrderBy(
-                r => r.rating).First();
-
-            Console.WriteLine(
-                $"Highest: {highest.name} ({highest.rating})");
-
-            Console.WriteLine(
-                $"Lowest: {lowest.name} ({lowest.rating})");
         }
     }
 
