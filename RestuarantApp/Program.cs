@@ -64,6 +64,22 @@ namespace RestuarantApp
             restaurants.Add(new Restuarant(id, name, type, rating));
 
             Console.WriteLine("เพิ่มข้อมูลร้านสำเร็จ");
+
+            // แสดงร้านอาหารที่มีคะแนนตั้งแต่ 4.5 ขึ้นไป
+            Console.WriteLine("\n=== ร้านอาหารคะแนนดี (4.5 ขึ้นไป) ===");
+            foreach (var restaurant in restaurants)
+            {
+                if (restaurant.rating >= 4.5)
+                {
+                    Console.WriteLine(
+                        $"ชื่อร้าน: {restaurant.name}, " +
+                        $"ประเภท: {restaurant.type}, " +
+                        $"คะแนน: {restaurant.rating}"
+                    );
+                }
+            }
+
+
         }
         // แสดงค่าสูงสุดต่ำสุด
         static void Summary(List<Restuarant> list)
