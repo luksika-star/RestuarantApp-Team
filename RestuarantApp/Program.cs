@@ -66,8 +66,15 @@ namespace RestuarantApp
 
             // แสดงร้านอาหารที่มีคะแนนตั้งแต่ 4.5 ขึ้นไป
             Console.WriteLine("\n=== ร้านอาหารคะแนนดี (4.5 ขึ้นไป) ===");
+            foreach (var restaurant in restaurants)
+            {
+                if (restaurant.rating >= 4.5)
+                {
+                   
+                }
+            }
 
-           
+
         }
     }
 
