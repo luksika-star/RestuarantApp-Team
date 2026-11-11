@@ -42,8 +42,6 @@ namespace RestuarantApp
 
         }
 
-
-
         public static void AddRestaurant(List<Restuarant> restaurants)
         {
             Console.WriteLine("\n--- เพิ่มข้อมูลร้านอาหารใหม่ ---");
@@ -83,13 +81,11 @@ namespace RestuarantApp
                 }
             }
         }
-            public class Summary
+        // แสดงค่าสูงสุดต่ำสุด
         {
 
         
-        public void summary(List<Restuarant> list)
         {
-            Console.WriteLine("\n===== Restaurant Summary =====");
 
             if (list.Count == 0)
             {
